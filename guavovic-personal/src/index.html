@@ -10,10 +10,12 @@
 
 <body>
     <div class="background-gif"></div>
-    <div class="background-overlay"></div>
-    <div class="noise"></div>
 
-    <div class="container">
+    <div class="background-noise-gif"></div>
+
+    <div class="background-overlay"></div>
+
+    <div class="profile-container">
         <div class="profile-block">
             <img src="images/profile.png" alt="guavovic" class="profile-img" id="profile-img">
             <h1 id="profile-title">@guavovic</h1>
@@ -23,25 +25,31 @@
         <div class="spacer"></div>
 
         <div class="links">
-            <a href="https://www.linkedin.com/in/gustavo-victor/" target="_blank">
+            <a id="linkedin-link" target="_blank">
                 <img src="images/icons/linkedin.png" alt="LinkedIn" class="icon">
             </a>
-            <a href="https://github.com/guavovic" target="_blank">
+            <a id="github-link" target="_blank">
                 <img src="images/icons/github.png" alt="GitHub" class="icon">
             </a>
-            <a href="https://instagram.com/guavovic" target="_blank">
+            <a id="instagram-link" target="_blank">
                 <img src="images/icons/instagram.png" alt="Instagram" class="icon">
             </a>
-            <a href="https://open.spotify.com/user/55rmruj3u8vmwlo23q9iub5oi?si=f3a553501d5d4b3f" target="_blank">
+            <a id="spotify-link" target="_blank">
                 <img src="images/icons/spotify.png" alt="Spotify" class="icon">
             </a>
-            <a href="mailto:gustavopinheirocontact@gmail.com">
+            <a id="email-link">
                 <img src="images/icons/email.png" alt="Email" class="icon">
             </a>
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <!-- <div class="spotify-player">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2CvLS4etYRffqVvJivPnrC?utm_source=generator&theme=0" width="400" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>  -->
+     
+    <script src="js/links.js"></script>
+    <script src="js/button-animations.js"></script>
+    <script src="js/background-parallax.js"></script>
 </body>
 
 </html>

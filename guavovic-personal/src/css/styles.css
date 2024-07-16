@@ -11,15 +11,29 @@ body {
 }
 
 .background-gif {
-    position: fixed;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%; 
+    background-image: url('../videos/dj-dachshund-background.gif');
+    background-size: cover;
+    background-repeat: repeat;
+    filter: blur(8px);
+    z-index: 0;
+}
+
+.background-noise-gif {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('videos/backgroundvideo.gif');
-    filter: blur(8px);
-    border-radius: 10px; /* Ajuste conforme necessário */
-    z-index: -1;
+    background-image: url('../videos/noise.gif');
+    background-size: cover;
+    opacity: 0.0;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .background-overlay {
@@ -28,32 +42,20 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.noise {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("images/noise.png");
-    opacity: 0.2;
+    background-color: rgba(0, 0, 0, 0.75);
     pointer-events: none;
     z-index: 2;
 }
 
-.container {
+.profile-container {
     background-color: rgba(0, 0, 0, 0);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     text-align: center;
     max-width: 400px;
     width: 100%;
     position: relative;
-    z-index: 3;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,4 +150,11 @@ p {
 
 .spacer {
     height: 20px;
+}
+
+.spotify-player {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 999; 
 }
