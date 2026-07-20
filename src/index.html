@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#121212">
+
+    <title>guavovic | Gustavo Victor</title>
+    <meta name="description"
+        content="Gustavo Victor - software developer focused on back-end, integrations and automation.">
+
+    <meta property="og:title" content="guavovic | Gustavo Victor">
+    <meta property="og:description" content="Software developer focused on back-end, integrations and automation.">
+    <meta property="og:image" content="images/preview.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guavovic.vercel.app/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="guavovic | Gustavo Victor">
+    <meta name="twitter:description" content="Software developer focused on back-end, integrations and automation.">
+    <meta name="twitter:image" content="images/preview.jpg">
+
+    <link id="favicon" rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    <link rel="manifest" href="manifest.json">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="intro">
+    <div class="background" aria-hidden="true">
+        <video class="background-video" autoplay muted loop playsinline poster="images/poster.jpg">
+            <source src="videos/dj-dachshund-background.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="background-overlay"></div>
+
+    <main class="profile-container">
+        <div class="profile-block">
+            <img src="images/profile.jpg" alt="guavovic" class="profile-img" id="profile-img">
+            <h1 id="profile-title" title="Click to copy">@guavovic</h1>
+            <p id="profile-description">Software developer. Passionate about games and music.</p>
+            <p id="currently" class="currently">🛠️ Building integrations at EvoTalks</p>
+        </div>
+
+        <div class="spacer"></div>
+
+        <nav class="links">
+            <a href="https://www.linkedin.com/in/gustavo-victor-pinheiro/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <img src="images/icons/linkedin.png" alt="LinkedIn" class="icon">
+            </a>
+            <a href="https://github.com/guavovic" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="images/icons/github.png" alt="GitHub" class="icon">
+            </a>
+            <a href="https://instagram.com/victorguavo" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram">
+                <img src="images/icons/instagram.png" alt="Instagram" class="icon">
+            </a>
+            <a href="https://www.last.fm/user/guavovic" target="_blank" rel="noopener noreferrer" aria-label="Last.fm">
+                <img src="images/icons/lastfm.png" alt="Last.fm" class="icon">
+            </a>
+            <a href="mailto:gustavo.victor.pinheiro@gmail.com" aria-label="Email">
+                <img src="images/icons/email.png" alt="Email" class="icon">
+            </a>
+        </nav>
+    </main>
+
+    <div class="np-wrap">
+        <div id="np-panel" class="np-panel" hidden>
+            <div class="np-panel-head">
+                <span>Top tracks · this week</span>
+                <button id="np-close" class="np-close" aria-label="Close">&times;</button>
+            </div>
+            <ul id="np-toplist" class="np-toplist"></ul>
+            <a class="np-panel-link" href="https://www.last.fm/user/guavovic" target="_blank" rel="noopener noreferrer">
+                View full profile on Last.fm →
+            </a>
+        </div>
+
+        <button id="now-playing" class="now-playing" type="button" aria-live="polite" aria-label="Open recent listening"
+            hidden>
+            <img id="np-art" class="np-art" src="" alt="">
+            <span class="np-note" aria-hidden="true">♪</span>
+            <div class="np-info">
+                <span id="np-title" class="np-title"></span>
+                <span id="np-artist" class="np-artist"></span>
+            </div>
+            <span class="np-bars" aria-hidden="true">
+                <span></span><span></span><span></span><span></span>
+            </span>
+        </button>
+    </div>
+
+    <div id="local-time" class="local-time"></div>
+
+    <div id="offline-badge" class="offline-badge" role="status" aria-live="polite">
+        <span class="offline-dot"></span> You're offline
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="js/config.js"></script>
+    <script src="js/now-playing.js"></script>
+    <script src="js/local-time.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/greeting.js"></script>
+    <script src="js/tilt.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/favicon.js"></script>
+    <script src="js/confetti.js"></script>
+    <script src="js/easter-egg.js"></script>
+    <script src="js/anniversary.js"></script>
+    <script src="js/offline.js"></script>
+    <script src="js/console-msg.js"></script>
+    <script src="js/tab-title.js"></script>
+    <script src="js/seasonal.js"></script>
+    <script src="js/flappy.js"></script>
+    <script src="js/dino.js"></script>
+    <script src="js/osu-mania.js"></script>
+    <script src="js/button-animations.js"></script>
+    <script src="js/background-parallax.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('sw.js').catch(function () { });
+            });
+        }
+    </script>
+</body>
+
+</html>
