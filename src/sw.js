@@ -1,11 +1,12 @@
 // service worker
-const CACHE = 'guavovic-v14';
+const CACHE = 'guavovic-v15';
 
 const ASSETS = [
     './',
     './index.html',
     './css/styles.css',
     './js/config.js',
+    './js/sw-register.js',
     './js/now-playing.js',
     './js/button-animations.js',
     './js/background-parallax.js',
