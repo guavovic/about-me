@@ -1,5 +1,5 @@
 // service worker
-const CACHE = 'guavovic-v15';
+const CACHE = 'guavovic-v16';
 
 const ASSETS = [
     './',
@@ -7,6 +7,7 @@ const ASSETS = [
     './css/styles.css',
     './js/config.js',
     './js/sw-register.js',
+    './js/va-init.js',
     './js/now-playing.js',
     './js/button-animations.js',
     './js/background-parallax.js',
@@ -59,6 +60,9 @@ self.addEventListener('fetch', (event) => {
     if (req.method !== 'GET' || new URL(req.url).origin !== self.location.origin) {
         return;
     }
+
+    // Vercel Web Analytics: sempre rede, nunca cachear
+    if (req.url.includes('/_vercel/')) return;
 
     // config.js muda com frequência (edições pessoais): sempre da rede primeiro, caindo pro cache só se estiver offline
     if (req.url.includes('/config.js')) {
