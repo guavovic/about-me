@@ -1,8 +1,4 @@
-# guavovic-website
-
-**Live:** [guavovic.vercel.app](https://guavovic.vercel.app/)
-
-## About
+# [guavovic-website](https://guavovic.vercel.app/)
 
 This is my corner of the internet: a fast, installable link hub that also happens to be full of small interactive details I built for fun. It doubles as a playground for vanilla-JS experiments.
 
